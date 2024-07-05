@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generar PDF con jsPDF</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+    
+
+
+</head>
+<body>
+
+<div class="comtGeneral">
+    <div class="contCreacion">
+        <div class="conDatos">
+            <table id="myTable">
+                <thead>
+                    <tr>
+                        <th>Rondas</th>
+                        <th>Decripción</th>
+                        <th>N°</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><textarea rows="1" oninput="cambiarTamaño(this)"></textarea></td>
+                        <td><textarea rows="1" oninput="cambiarTamaño(this)"></textarea></td>
+                        <td><textarea rows="1" oninput="cambiarTamaño(this)"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="agregarFil()">Añadir Fila</button>
+        </div>
+        <div class="contEspecificiones"></div>
+        <div class="Botones">
+            <button onclick="descargarPDF()" id="btnDescargar">Descargar PDF</button>
+            <button onclick="verPDF()" id="btnVisualizar">Ver PDF</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+<!--
+    <script>
+        // Espera a que el DOM esté completamente cargado
+        document.addEventListener("DOMContentLoaded", function() {
+            const { jsPDF } = window.jspdf;
+    
+            // Obtener el botón por su ID
+            const button = document.getElementById('generarPDF');
+    
+            // Agregar un event listener al botón para el evento click
+            button.addEventListener('click', function() {
+                // Crear una instancia de jsPDF
+                const doc = new jsPDF();
+    
+                // Añadir texto al documento
+                doc.text('Hola mundo!', 10, 10);
+    
+                // Guardar el documento PDF con el nombre 'ejemplo.pdf'
+                doc.save('ejemplo.pdf');
+            });
+        });
+    </script>
+
+-->
+
+</body>
+</html>
